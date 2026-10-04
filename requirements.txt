@@ -7,6 +7,7 @@ notebook
 pandas
 numpy
 matplotlib
+seaborn
 
 # NLP clásico
 spacy
@@ -17,7 +18,14 @@ scikit-learn
 
 # Modelos preentrenados / Transformers (Tema-03 Modelos generativos, Tema-04)
 transformers
+hf_xet          # descarga acelerada de modelos desde Hugging Face
 torch
+torchvision
+
+# GPU (opcional): la rueda por defecto de torch es CPU-only. Para NVIDIA RTX 50xx
+# (Blackwell, sm_120) hace falta una compilada con CUDA 13:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+# Verificar con: python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_arch_list())"
 
 # Visión computacional (semana-05: Tema-09, Tema-10)
 opencv-python
