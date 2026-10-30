@@ -1,0 +1,45 @@
+recipe: default.v1
+
+language: es
+
+pipeline:
+- name: WhitespaceTokenizer
+
+- name: RegexFeaturizer
+
+- name: LexicalSyntacticFeaturizer
+
+- name: CountVectorsFeaturizer
+
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+
+- name: RegexEntityExtractor
+  case_sensitive: false
+  use_lookup_tables: true
+  use_regexes: true
+  use_word_boundaries: true
+
+- name: EntitySynonymMapper
+
+- name: FallbackClassifier
+  threshold: 0.60
+  ambiguity_threshold: 0.10
+
+
+policies:
+- name: MemoizationPolicy
+
+- name: RulePolicy
+
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  constrain_similarities: true
+assistant_id: 20261004-015550-forgiving-meter

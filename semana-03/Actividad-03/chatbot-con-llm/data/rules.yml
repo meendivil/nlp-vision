@@ -1,0 +1,108 @@
+version: "3.1"
+
+rules:
+
+# --------------------------------------------------
+# SALUDO
+# --------------------------------------------------
+
+- rule: Responder saludo
+  steps:
+    - intent: saludo
+    - action: action_responder_llm
+
+
+# --------------------------------------------------
+# CONSULTA SALDO
+# --------------------------------------------------
+
+- rule: Iniciar consulta de saldo
+  steps:
+    - intent: consulta_saldo
+    - action: saldo_form
+    - active_loop: saldo_form
+
+
+- rule: Finalizar consulta de saldo
+  condition:
+    - active_loop: saldo_form
+  steps:
+    - action: saldo_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: action_consultar_saldo
+
+
+# --------------------------------------------------
+# ESTADO DE CUENTA
+# --------------------------------------------------
+
+- rule: Iniciar consulta de estado de cuenta
+  steps:
+    - intent: estado_cuenta
+    - action: estado_cuenta_form
+    - active_loop: estado_cuenta_form
+
+
+- rule: Finalizar consulta de estado de cuenta
+  condition:
+    - active_loop: estado_cuenta_form
+  steps:
+    - action: estado_cuenta_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: action_estado_cuenta
+
+
+# --------------------------------------------------
+# SOPORTE
+# --------------------------------------------------
+
+- rule: Iniciar soporte
+  steps:
+    - intent: soporte
+    - action: soporte_form
+    - active_loop: soporte_form
+
+
+- rule: Finalizar soporte
+  condition:
+    - active_loop: soporte_form
+  steps:
+    - action: soporte_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: action_procesar_soporte
+
+
+# --------------------------------------------------
+# CONSULTA GENERAL
+# --------------------------------------------------
+
+- rule: Responder consulta general
+  steps:
+    - intent: consulta_general
+    - action: action_responder_llm
+
+- rule: Dato suelto fuera de un formulario
+  steps:
+    - intent: informar
+    - action: action_responder_llm
+
+
+# --------------------------------------------------
+# FALLBACK
+# --------------------------------------------------
+
+- rule: No se entendio el mensaje
+  steps:
+    - intent: nlu_fallback
+    - action: action_fallback_llm
+
+- rule: Mensaje fuera de alcance
+  steps:
+    - intent: fuera_de_alcance
+    - action: action_fallback_llm

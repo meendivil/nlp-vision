@@ -1,0 +1,175 @@
+﻿Versión,Entrada,Repetición,Turno,Usuario,Respuesta,Botones,Latencia (s),Palabras,Cliente identificado,Cantidades,Cantidades sin respaldo,Nombres sin respaldo
+Sin LLM,Hola,1,1,Hola,"Hola, ¿en qué puedo ayudarte?",,0.02,5,,0,,
+Sin LLM,Hola,2,1,Hola,"Hola, ¿en qué puedo ayudarte?",,0.02,5,,0,,
+Sin LLM,Hola,3,1,Hola,"Hola, ¿en qué puedo ayudarte?",,0.02,5,,0,,
+Sin LLM,Hola,4,1,Hola,"Hola, ¿en qué puedo ayudarte?",,0.02,5,,0,,
+Sin LLM,Hola,5,1,Hola,"Hola, ¿en qué puedo ayudarte?",,0.02,5,,0,,
+Sin LLM,Dame mi saldo bancario,1,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Sin LLM,Dame mi saldo bancario,1,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Sin LLM,Dame mi saldo bancario,1,3,débito,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.06,14,U001,1,,
+Sin LLM,Dame mi saldo bancario,2,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Sin LLM,Dame mi saldo bancario,2,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.04,12,U001,0,,
+Sin LLM,Dame mi saldo bancario,2,3,débito,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.05,14,U001,1,,
+Sin LLM,Dame mi saldo bancario,3,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.04,10,,0,,
+Sin LLM,Dame mi saldo bancario,3,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.04,12,U001,0,,
+Sin LLM,Dame mi saldo bancario,3,3,débito,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.05,14,U001,1,,
+Sin LLM,Dame mi saldo bancario,4,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.06,10,,0,,
+Sin LLM,Dame mi saldo bancario,4,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Sin LLM,Dame mi saldo bancario,4,3,débito,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.05,14,U001,1,,
+Sin LLM,Dame mi saldo bancario,5,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Sin LLM,Dame mi saldo bancario,5,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.04,12,U001,0,,
+Sin LLM,Dame mi saldo bancario,5,3,débito,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.06,14,U001,1,,
+Sin LLM,Quiero mi estado de cuenta,1,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Sin LLM,Quiero mi estado de cuenta,1,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,1,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.04,11,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,1,4,septiembre 2026,"Estado de cuenta - Septiembre 2026
+Cliente: Ana López
+Cuenta: debito
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+• 2026-09-01 - Depósito de nómina: $6,000.00 MXN
+• 2026-09-08 - Supermercado: $-1,250.25 MXN
+• 2026-09-15 - Transferencia SPEI: $-249.00 MXN",,0.06,41,U001,5,,
+Sin LLM,Quiero mi estado de cuenta,2,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Sin LLM,Quiero mi estado de cuenta,2,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.05,12,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,2,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.04,11,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,2,4,septiembre 2026,"Estado de cuenta - Septiembre 2026
+Cliente: Ana López
+Cuenta: debito
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+• 2026-09-01 - Depósito de nómina: $6,000.00 MXN
+• 2026-09-08 - Supermercado: $-1,250.25 MXN
+• 2026-09-15 - Transferencia SPEI: $-249.00 MXN",,0.05,41,U001,5,,
+Sin LLM,Quiero mi estado de cuenta,3,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.04,10,,0,,
+Sin LLM,Quiero mi estado de cuenta,3,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,3,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.03,11,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,3,4,septiembre 2026,"Estado de cuenta - Septiembre 2026
+Cliente: Ana López
+Cuenta: debito
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+• 2026-09-01 - Depósito de nómina: $6,000.00 MXN
+• 2026-09-08 - Supermercado: $-1,250.25 MXN
+• 2026-09-15 - Transferencia SPEI: $-249.00 MXN",,0.06,41,U001,5,,
+Sin LLM,Quiero mi estado de cuenta,4,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Sin LLM,Quiero mi estado de cuenta,4,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,4,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.03,11,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,4,4,septiembre 2026,"Estado de cuenta - Septiembre 2026
+Cliente: Ana López
+Cuenta: debito
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+• 2026-09-01 - Depósito de nómina: $6,000.00 MXN
+• 2026-09-08 - Supermercado: $-1,250.25 MXN
+• 2026-09-15 - Transferencia SPEI: $-249.00 MXN",,0.06,41,U001,5,,
+Sin LLM,Quiero mi estado de cuenta,5,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.06,10,,0,,
+Sin LLM,Quiero mi estado de cuenta,5,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,5,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.05,11,U001,0,,
+Sin LLM,Quiero mi estado de cuenta,5,4,septiembre 2026,"Estado de cuenta - Septiembre 2026
+Cliente: Ana López
+Cuenta: debito
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+• 2026-09-01 - Depósito de nómina: $6,000.00 MXN
+• 2026-09-08 - Supermercado: $-1,250.25 MXN
+• 2026-09-15 - Transferencia SPEI: $-249.00 MXN",,0.05,41,U001,5,,
+Sin LLM,Necesito ayuda con mi cuenta,1,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.02,6,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,1,2,tengo un cargo no reconocido en mi cuenta,Registré tu reporte de soporte: cargo no reconocido. Tu folio es SOP-CDC2B7. Un asesor dará seguimiento a tu caso.,,0.03,19,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,2,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.01,6,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,2,2,tengo un cargo no reconocido en mi cuenta,Registré tu reporte de soporte: cargo no reconocido. Tu folio es SOP-AFACEE. Un asesor dará seguimiento a tu caso.,,0.05,19,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,3,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.02,6,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,3,2,tengo un cargo no reconocido en mi cuenta,Registré tu reporte de soporte: cargo no reconocido. Tu folio es SOP-469D6D. Un asesor dará seguimiento a tu caso.,,0.05,19,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,4,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.0,6,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,4,2,tengo un cargo no reconocido en mi cuenta,Registré tu reporte de soporte: cargo no reconocido. Tu folio es SOP-993670. Un asesor dará seguimiento a tu caso.,,0.03,19,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,5,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.02,6,,0,,
+Sin LLM,Necesito ayuda con mi cuenta,5,2,tengo un cargo no reconocido en mi cuenta,Registré tu reporte de soporte: cargo no reconocido. Tu folio es SOP-A2F32C. Un asesor dará seguimiento a tu caso.,,0.05,19,,0,,
+Sin LLM,No puedo entrar a la aplicación,1,1,No puedo entrar a la aplicación,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,0.01,11,,0,,
+Sin LLM,No puedo entrar a la aplicación,2,1,No puedo entrar a la aplicación,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,0.02,11,,0,,
+Sin LLM,No puedo entrar a la aplicación,3,1,No puedo entrar a la aplicación,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,0.03,11,,0,,
+Sin LLM,No puedo entrar a la aplicación,4,1,No puedo entrar a la aplicación,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,0.02,11,,0,,
+Sin LLM,No puedo entrar a la aplicación,5,1,No puedo entrar a la aplicación,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,0.02,11,,0,,
+Con LLM,Hola,1,1,Hola,¡Hola! Me alegra poder ayudarte. Mi nombre es Asistente Virtual del Banco. ¿En qué puedo ayudarte hoy?,,0.29,17,,0,,
+Con LLM,Hola,2,1,Hola,¡Hola! Me alegra que estés aquí. Mi nombre es Asistente Virtual del Banco y estoy aquí para ayudarte con cualquier consulta o problema que tengas. ¿En qué puedo ayudarte hoy?,,0.33,30,,0,,
+Con LLM,Hola,3,1,Hola,"¡Hola, ¿cómo estás? Me alegra que estés aquí. Mi nombre es Asistente Virtual del Banco y estoy aquí para ayudarte con cualquier inquietud o pregunta que tengas sobre nuestros servicios. ¿En qué puedo ayudarte hoy?",,0.38,35,,0,,
+Con LLM,Hola,4,1,Hola,"¡Hola, Carlos! Bienvenido a nuestro banco. ¿En qué puedo ayudarte hoy?",,0.19,11,,0,,Carlos
+Con LLM,Hola,5,1,Hola,"¡Hola, ¿cómo estás? Me alegra que estés aquí. Puedo ayudarte con cualquier consulta o problema relacionado con tus servicios bancarios, como consultar tu saldo, estado de cuenta o reportar cualquier problema que puedas tener. ¿En qué puedo ayudarte hoy?",,0.39,39,,0,,
+Con LLM,Dame mi saldo bancario,1,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Con LLM,Dame mi saldo bancario,1,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.04,12,U001,0,,
+Con LLM,Dame mi saldo bancario,1,3,débito,"Hola Ana, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.25,14,U001,1,,
+Con LLM,Dame mi saldo bancario,2,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Con LLM,Dame mi saldo bancario,2,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.05,12,U001,0,,
+Con LLM,Dame mi saldo bancario,2,3,débito,"Hola Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.23,15,U001,1,,
+Con LLM,Dame mi saldo bancario,3,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.06,10,,0,,
+Con LLM,Dame mi saldo bancario,3,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Con LLM,Dame mi saldo bancario,3,3,débito,"Hola Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.21,15,U001,1,,
+Con LLM,Dame mi saldo bancario,4,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.06,10,,0,,
+Con LLM,Dame mi saldo bancario,4,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Con LLM,Dame mi saldo bancario,4,3,débito,"Hola Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.22,15,U001,1,,
+Con LLM,Dame mi saldo bancario,5,1,Dame mi saldo bancario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.06,10,,0,,
+Con LLM,Dame mi saldo bancario,5,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.05,12,U001,0,,
+Con LLM,Dame mi saldo bancario,5,3,débito,"Hola Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,0.24,15,U001,1,,
+Con LLM,Quiero mi estado de cuenta,1,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.04,10,,0,,
+Con LLM,Quiero mi estado de cuenta,1,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Con LLM,Quiero mi estado de cuenta,1,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.04,11,U001,0,,
+Con LLM,Quiero mi estado de cuenta,1,4,septiembre 2026,"Hola Ana López, te presento el estado de cuenta de tu cuenta de débito para el mes de septiembre 2026. Tu saldo inicial era de $16,000.00 MXN y tu saldo final es de $20,500.75 MXN. A continuación, te muestro los movimientos realizados durante ese mes:
+- 2026-09-01: Depósito de nómina: $6,000.00 MXN
+- 2026-09-08: Supermercado: $-1,250.25 MXN
+- 2026-09-15: Transferencia SPEI: $-249.00 MXN",,0.84,63,U001,5,,
+Con LLM,Quiero mi estado de cuenta,2,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Con LLM,Quiero mi estado de cuenta,2,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.04,12,U001,0,,
+Con LLM,Quiero mi estado de cuenta,2,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.02,11,U001,0,,
+Con LLM,Quiero mi estado de cuenta,2,4,septiembre 2026,"Hola Ana López, te presento el estado de cuenta de tu cuenta de débito para el mes de septiembre de 2026. 
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+- 2026-09-01: Depósito de nómina: $6,000.00 MXN
+- 2026-09-08: Supermercado: $-1,250.25 MXN
+- 2026-09-15: Transferencia SPEI: $-249.00 MXN",,0.74,48,U001,5,,
+Con LLM,Quiero mi estado de cuenta,3,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Con LLM,Quiero mi estado de cuenta,3,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.04,12,U001,0,,
+Con LLM,Quiero mi estado de cuenta,3,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.03,11,U001,0,,
+Con LLM,Quiero mi estado de cuenta,3,4,septiembre 2026,"Hola Ana López, aquí tienes tu estado de cuenta para septiembre 2026:
+- Saldo inicial: $16,000.00 MXN
+- Saldo final: $20,500.75 MXN
+Movimientos:
+- 2026-09-01: Depósito de nómina: $6,000.00 MXN
+- 2026-09-08: Supermercado: $-1,250.25 MXN
+- 2026-09-15: Transferencia SPEI: $-249.00 MXN",,0.71,41,U001,5,,
+Con LLM,Quiero mi estado de cuenta,4,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Con LLM,Quiero mi estado de cuenta,4,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.03,12,U001,0,,
+Con LLM,Quiero mi estado de cuenta,4,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.05,11,U001,0,,
+Con LLM,Quiero mi estado de cuenta,4,4,septiembre 2026,"Hola Ana López, te presento el estado de cuenta de tu cuenta de débito para el mes de septiembre 2026. 
+El saldo inicial de tu cuenta fue de $16,000.00 MXN. 
+El saldo final de tu cuenta es de $20,500.75 MXN. 
+A continuación, te presento los movimientos realizados durante el mes de septiembre 2026: 
+- 2026-09-01: Depósito de nómina: $6,000.00 MXN
+- 2026-09-08: Supermercado: $-1,250.25 MXN
+- 2026-09-15: Transferencia SPEI: $-249.00 MXN",,0.93,71,U001,5,,
+Con LLM,Quiero mi estado de cuenta,5,1,Quiero mi estado de cuenta,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,0.05,10,,0,,
+Con LLM,Quiero mi estado de cuenta,5,2,U001,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,0.02,12,U001,0,,
+Con LLM,Quiero mi estado de cuenta,5,3,débito,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,0.03,11,U001,0,,
+Con LLM,Quiero mi estado de cuenta,5,4,septiembre 2026,"Hola Ana López, te presento el estado de cuenta de tu cuenta de débito para el mes de septiembre de 2026. El saldo inicial era de $16,000.00 MXN y el saldo final es de $20,500.75 MXN. A continuación, te muestro los movimientos realizados durante este mes:
+* 2026-09-01: Depósito de nómina: $6,000.00 MXN
+* 2026-09-08: Supermercado: -$1,250.25 MXN
+* 2026-09-15: Transferencia SPEI: -$249.00 MXN",,0.81,64,U001,5,,
+Con LLM,Necesito ayuda con mi cuenta,1,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.02,6,,0,,
+Con LLM,Necesito ayuda con mi cuenta,1,2,tengo un cargo no reconocido en mi cuenta,"¡Hola! Gracias por contactarnos. He registrado tu reporte de soporte con el folio SOP-5C3AFF, relacionado con un cargo no reconocido en tu cuenta. Un asesor de nuestro equipo se pondrá en contacto contigo pronto para seguir tu caso.",,0.42,38,,0,,
+Con LLM,Necesito ayuda con mi cuenta,2,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.01,6,,0,,
+Con LLM,Necesito ayuda con mi cuenta,2,2,tengo un cargo no reconocido en mi cuenta,"¡Hola, gracias por contactarnos. He registrado tu reporte de soporte con el cargo no reconocido en tu cuenta, con el folio SOP-9FB539. Un asesor de nuestro equipo se pondrá en contacto contigo para investigar este asunto y brindarte una solución. Estoy aquí para ayudarte, ¿puedo hacer algo más por ti?",,0.5,50,,0,,
+Con LLM,Necesito ayuda con mi cuenta,3,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.01,6,,0,,
+Con LLM,Necesito ayuda con mi cuenta,3,2,tengo un cargo no reconocido en mi cuenta,"Se ha registrado tu reporte de soporte, con el folio SOP-104278. Un asesor especializado en tu caso se pondrá en contacto con ti para investigar el cargo no reconocido en tu cuenta. Estamos aquí para ayudarte y asegurarnos de que se resuelva tu problema de manera justa y rápida.",,0.48,49,,0,,
+Con LLM,Necesito ayuda con mi cuenta,4,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.02,6,,0,,
+Con LLM,Necesito ayuda con mi cuenta,4,2,tengo un cargo no reconocido en mi cuenta,"¡Hola, gracias por contactarnos. He registrado tu reporte de soporte con el folio SOP-80B6FC. Un asesor de nuestro equipo se pondrá en contacto contigo para investigar el cargo no reconocido en tu cuenta. Estamos aquí para ayudarte.",,0.4,37,,0,,
+Con LLM,Necesito ayuda con mi cuenta,5,1,Necesito ayuda con mi cuenta,¿Qué tipo de problema necesitas reportar?,,0.01,6,,0,,
+Con LLM,Necesito ayuda con mi cuenta,5,2,tengo un cargo no reconocido en mi cuenta,"¡Hola, gracias por contactarnos. He registrado tu reporte de soporte con el cargo no reconocido en tu cuenta, con el folio SOP-10B6E7. Un asesor se pondrá en contacto contigo para investigar y resolver el problema. Estoy aquí para ayudarte en lo que necesites.",,0.45,43,,0,,
+Con LLM,No puedo entrar a la aplicación,1,1,No puedo entrar a la aplicación,"Lo siento, no entendí tu consulta. ¿Podrías reformular tu pregunta y decirme cómo puedo ayudarte? Estamos aquí para ayudarte con cualquier pregunta o problema relacionado con tu cuenta bancaria. Puedes elegir entre las opciones disponibles: Consultar saldo, Estado de cuenta, Reportar un problema o Información general. ¿En qué puedo ayudarte hoy?","Consultar saldo, Estado de cuenta, Reportar un problema, Información general",0.54,51,,0,,
+Con LLM,No puedo entrar a la aplicación,2,1,No puedo entrar a la aplicación,"Lo siento, no entendí tu consulta. ¿Podrías reformular tu pregunta y decirme cómo puedo ayudarte? Estamos aquí para asistirte en lo que necesites, como consultar tu saldo, ver el estado de tu cuenta o informarte sobre algún problema que hayas encontrado. ¿Podrías elegir una de las siguientes opciones: Consultar saldo, Estado de cuenta, Reportar un problema o Información general?","Consultar saldo, Estado de cuenta, Reportar un problema, Información general",0.54,59,,0,,
+Con LLM,No puedo entrar a la aplicación,3,1,No puedo entrar a la aplicación,"Lo siento, no entiendo tu consulta. ¿Podrías reformular tu pregunta y decirme qué problema tienes con la aplicación? Estamos aquí para ayudarte. Puedes consultar tu saldo, el estado de tu cuenta, informarte sobre tu cuenta o reportar cualquier problema que estés experimentando. ¿Podrías decirme qué opción deseas?","Consultar saldo, Estado de cuenta, Reportar un problema, Información general",0.45,47,,0,,
+Con LLM,No puedo entrar a la aplicación,4,1,No puedo entrar a la aplicación,"Lo siento, no entendí tu consulta. ¿Podrías reformular tu pregunta o solicitud? Dispongo de las siguientes opciones: Consultar saldo, Estado de cuenta, Reportar un problema, Información general. ¿En qué puedo ayudarte?","Consultar saldo, Estado de cuenta, Reportar un problema, Información general",0.34,31,,0,,
+Con LLM,No puedo entrar a la aplicación,5,1,No puedo entrar a la aplicación,"Lo siento, Carlos, no he entendido tu solicitud. ¿Podrías reformular tu pregunta y decirme qué problema estás experimentando al intentar acceder a la aplicación? Para tu ayuda, tenemos varias opciones disponibles: Consultar saldo, Estado de cuenta, Reportar un problema o Información general. ¿Podrías decirme cuál es la opción más relevante para ti?","Consultar saldo, Estado de cuenta, Reportar un problema, Información general",0.5,52,,0,,Carlos

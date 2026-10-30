@@ -1,0 +1,151 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - consulta_saldo
+  - estado_cuenta
+  - soporte
+  - consulta_general
+  - informar
+  - fuera_de_alcance
+
+entities:
+  - usuario_id
+  - tipo_cuenta
+  - fecha
+  - monto
+  - tipo_solicitud
+
+
+slots:
+
+  usuario_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: usuario_id
+      - type: from_text
+        conditions:
+          - active_loop: saldo_form
+            requested_slot: usuario_id
+          - active_loop: estado_cuenta_form
+            requested_slot: usuario_id
+
+  tipo_cuenta:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: tipo_cuenta
+      - type: from_text
+        conditions:
+          - active_loop: saldo_form
+            requested_slot: tipo_cuenta
+          - active_loop: estado_cuenta_form
+            requested_slot: tipo_cuenta
+
+  fecha:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: fecha
+      - type: from_text
+        conditions:
+          - active_loop: estado_cuenta_form
+            requested_slot: fecha
+
+  monto:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: monto
+
+  tipo_solicitud:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: tipo_solicitud
+      - type: from_text
+        not_intent:
+          - saludo
+          - consulta_saldo
+          - estado_cuenta
+          - consulta_general
+          - fuera_de_alcance
+        conditions:
+          - active_loop: soporte_form
+            requested_slot: tipo_solicitud
+
+
+forms:
+
+  saldo_form:
+    required_slots:
+      - usuario_id
+      - tipo_cuenta
+
+  estado_cuenta_form:
+    required_slots:
+      - usuario_id
+      - tipo_cuenta
+      - fecha
+
+  soporte_form:
+    required_slots:
+      - tipo_solicitud
+
+
+responses:
+
+  utter_saludo:
+    - text: "Hola, ¿en qué puedo ayudarte?"
+
+  utter_ask_usuario_id:
+    - text: "Para continuar, indícame tu número de cliente (por ejemplo, U001)."
+
+  utter_ask_tipo_cuenta:
+    - text: "¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?"
+
+  utter_ask_fecha:
+    - text: "¿De qué fecha o periodo deseas consultar el estado de cuenta?"
+
+  utter_ask_tipo_solicitud:
+    - text: "¿Qué tipo de problema necesitas reportar?"
+
+  utter_consulta_general:
+    - text: "Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios."
+
+  utter_no_entendido:
+    - text: "No pude entender tu solicitud. ¿Podrías expresarla de otra manera? También puedes elegir una de estas opciones:"
+      buttons:
+        - title: "Consultar saldo"
+          payload: "/consulta_saldo"
+        - title: "Estado de cuenta"
+          payload: "/estado_cuenta"
+        - title: "Reportar un problema"
+          payload: "/soporte"
+        - title: "Información general"
+          payload: "/consulta_general"
+
+  utter_default:
+    - text: "No estoy seguro de cómo continuar. ¿Podrías reformular tu mensaje? También puedes elegir una de estas opciones:"
+      buttons:
+        - title: "Consultar saldo"
+          payload: "/consulta_saldo"
+        - title: "Estado de cuenta"
+          payload: "/estado_cuenta"
+        - title: "Reportar un problema"
+          payload: "/soporte"
+        - title: "Información general"
+          payload: "/consulta_general"
+
+actions:
+  - action_consultar_saldo
+  - action_estado_cuenta
+  - action_procesar_soporte
+  - validate_saldo_form
+  - validate_estado_cuenta_form

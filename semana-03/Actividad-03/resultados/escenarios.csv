@@ -1,0 +1,21 @@
+﻿Versión,Escenario,Completado,Datos faltantes,Botones en fallback
+Sin LLM,1. Contexto multiturno (U001),True,,
+Sin LLM,2. Saldo en un solo mensaje,True,,
+Sin LLM,3. Validaciones del formulario,True,,
+Sin LLM,4. Estado de cuenta con periodo inválido,True,,
+Sin LLM,5. Reporte de soporte,True,,
+Sin LLM,6. Consulta general específica,False,INE,
+Sin LLM,7. Fuera de alcance y botón de opción,True,,True
+Sin LLM,8. Mensaje sin sentido y recuperación,True,,True
+Sin LLM,9. Dato suelto fuera de un formulario,True,,
+Sin LLM,10. Cambio de tema dentro de un formulario,True,,
+Con LLM,1. Contexto multiturno (U001),True,,
+Con LLM,2. Saldo en un solo mensaje,True,,
+Con LLM,3. Validaciones del formulario,True,,
+Con LLM,4. Estado de cuenta con periodo inválido,True,,
+Con LLM,5. Reporte de soporte,True,,
+Con LLM,6. Consulta general específica,True,,
+Con LLM,7. Fuera de alcance y botón de opción,True,,True
+Con LLM,8. Mensaje sin sentido y recuperación,True,,False
+Con LLM,9. Dato suelto fuera de un formulario,True,,
+Con LLM,10. Cambio de tema dentro de un formulario,True,,

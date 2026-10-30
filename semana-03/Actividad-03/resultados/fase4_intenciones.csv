@@ -1,0 +1,6 @@
+﻿Entrada,Sin LLM,Con LLM
+Hola,saludo (1.00),saludo (1.00)
+Dame mi saldo bancario,consulta_saldo (1.00),consulta_saldo (1.00)
+Quiero mi estado de cuenta,estado_cuenta (1.00),estado_cuenta (1.00)
+Necesito ayuda con mi cuenta,soporte (1.00),soporte (1.00)
+No puedo entrar a la aplicación,consulta_general (0.92),nlu_fallback (0.60)

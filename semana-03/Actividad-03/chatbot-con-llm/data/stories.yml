@@ -1,0 +1,91 @@
+version: "3.1"
+
+stories:
+
+# --------------------------------------------------
+# SALUDO -> CONSULTA SALDO
+# --------------------------------------------------
+
+- story: Usuario saluda y después consulta saldo
+  steps:
+    - intent: saludo
+    - action: action_responder_llm
+
+    - intent: consulta_saldo
+    - action: saldo_form
+    - active_loop: saldo_form
+
+    - active_loop: null
+    - action: action_consultar_saldo
+
+
+# --------------------------------------------------
+# SALUDO -> ESTADO DE CUENTA
+# --------------------------------------------------
+
+- story: Usuario saluda y solicita estado de cuenta
+  steps:
+    - intent: saludo
+    - action: action_responder_llm
+
+    - intent: estado_cuenta
+    - action: estado_cuenta_form
+    - active_loop: estado_cuenta_form
+
+    - active_loop: null
+    - action: action_estado_cuenta
+
+
+# --------------------------------------------------
+# SALUDO -> SOPORTE
+# --------------------------------------------------
+
+- story: Usuario saluda y solicita soporte
+  steps:
+    - intent: saludo
+    - action: action_responder_llm
+
+    - intent: soporte
+    - action: soporte_form
+    - active_loop: soporte_form
+
+    - active_loop: null
+    - action: action_procesar_soporte
+
+
+# --------------------------------------------------
+# CONSULTA Y DESPUÉS OTRA CONSULTA
+# --------------------------------------------------
+
+- story: Consultar saldo y posteriormente estado de cuenta
+  steps:
+    - intent: consulta_saldo
+    - action: saldo_form
+    - active_loop: saldo_form
+
+    - active_loop: null
+    - action: action_consultar_saldo
+
+    - intent: estado_cuenta
+    - action: estado_cuenta_form
+    - active_loop: estado_cuenta_form
+
+    - active_loop: null
+    - action: action_estado_cuenta
+
+
+# --------------------------------------------------
+# CONSULTA GENERAL Y SOPORTE
+# --------------------------------------------------
+
+- story: Consulta general seguida de soporte
+  steps:
+    - intent: consulta_general
+    - action: action_responder_llm
+
+    - intent: soporte
+    - action: soporte_form
+    - active_loop: soporte_form
+
+    - active_loop: null
+    - action: action_procesar_soporte

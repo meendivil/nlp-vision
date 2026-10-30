@@ -1,0 +1,11 @@
+﻿Versión,Entrada,Turnos hasta la respuesta final,Primeras respuestas distintas,Respuestas finales distintas,Similitud media de las finales,Dato esperado en todas,Datos no respaldados,Palabras (final),Latencia final (s)
+Sin LLM,Hola,1.0,1.0,1.0,1.0,,0.0,5.0,0.02
+Sin LLM,Dame mi saldo bancario,3.0,1.0,1.0,1.0,True,0.0,14.0,0.05
+Sin LLM,Quiero mi estado de cuenta,4.0,1.0,1.0,1.0,True,0.0,41.0,0.06
+Sin LLM,Necesito ayuda con mi cuenta,2.0,1.0,1.0,1.0,True,0.0,19.0,0.04
+Sin LLM,No puedo entrar a la aplicación,1.0,1.0,1.0,1.0,False,0.0,11.0,0.02
+Con LLM,Hola,1.0,5.0,5.0,0.45,,1.0,26.4,0.32
+Con LLM,Dame mi saldo bancario,3.0,1.0,2.0,0.98,True,0.0,14.8,0.23
+Con LLM,Quiero mi estado de cuenta,4.0,1.0,5.0,0.62,True,0.0,57.4,0.81
+Con LLM,Necesito ayuda con mi cuenta,2.0,1.0,5.0,0.43,True,0.0,43.4,0.45
+Con LLM,No puedo entrar a la aplicación,1.0,5.0,5.0,0.29,False,1.0,48.0,0.47

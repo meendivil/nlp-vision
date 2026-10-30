@@ -1,0 +1,10 @@
+{
+  "Veces que volvió a pedir el número de cliente":{
+    "Sin LLM":0,
+    "Con LLM":0
+  },
+  "Respuestas que llaman a la clienta por su nombre":{
+    "Sin LLM":2,
+    "Con LLM":4
+  }
+}

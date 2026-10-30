@@ -1,0 +1,14 @@
+{
+  "Respuestas con cantidades":{
+    "Sin LLM":10,
+    "Con LLM":10
+  },
+  "Cantidades correctas (% de respuestas)":{
+    "Sin LLM":1.0,
+    "Con LLM":1.0
+  },
+  "Respuestas con un nombre no respaldado":{
+    "Sin LLM":0,
+    "Con LLM":1
+  }
+}

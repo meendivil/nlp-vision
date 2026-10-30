@@ -1,0 +1,102 @@
+﻿Versión,Escenario,Turno,Usuario,Etiqueta,Respuesta,Botones,Mensajes del bot,Latencia (s),Palabras,Cliente identificado,Cantidades,Cantidades sin respaldo,Nombres sin respaldo
+Sin LLM,1. Contexto multiturno (U001),1,"hola, soy U001",Saludo,"Hola, ¿en qué puedo ayudarte?",,1,0.03,5,U001,0,,
+Sin LLM,1. Contexto multiturno (U001),2,quiero consultar mi saldo,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.05,12,U001,0,,
+Sin LLM,1. Contexto multiturno (U001),3,débito,Saldo,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,1,0.05,14,U001,1,,
+Sin LLM,1. Contexto multiturno (U001),4,ahora quiero mi estado de cuenta,Pregunta del formulario,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,1,0.05,11,U001,0,,
+Sin LLM,1. Contexto multiturno (U001),5,septiembre 2026,Estado de cuenta,"Estado de cuenta - Septiembre 2026
+Cliente: Ana López
+Cuenta: debito
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+• 2026-09-01 - Depósito de nómina: $6,000.00 MXN
+• 2026-09-08 - Supermercado: $-1,250.25 MXN
+• 2026-09-15 - Transferencia SPEI: $-249.00 MXN",,3,0.06,41,U001,5,,
+Sin LLM,1. Contexto multiturno (U001),6,¿qué horario tienen las sucursales?,Consulta general,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,1,0.03,11,U001,0,,
+Sin LLM,2. Saldo en un solo mensaje,1,soy U003 y quiero el saldo de mi tarjeta de crédito,Saldo,"Mariana Torres, el saldo actual de tu cuenta de crédito es de $2,500.00 MXN. Tu crédito disponible es de $17,500.00 MXN.",,1,0.06,21,U003,2,,
+Sin LLM,3. Validaciones del formulario,1,consulta mi saldo,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.04,10,,0,,
+Sin LLM,3. Validaciones del formulario,2,U009,Validación,"El usuario indicado no existe. Para esta demostración puedes utilizar U001, U002, U003, U004 o U005.
+Para continuar, indícame tu número de cliente (por ejemplo, U001).",,2,0.02,26,,0,,
+Sin LLM,3. Validaciones del formulario,3,U004,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.04,12,U004,0,,
+Sin LLM,3. Validaciones del formulario,4,ahorro,Validación,"El tipo de cuenta debe ser débito o crédito.
+¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?",,2,0.03,21,U004,0,,
+Sin LLM,3. Validaciones del formulario,5,débito,Validación,"Roberto Hernández no tiene una cuenta de debito. Sus cuentas disponibles son: credito.
+¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?",,2,0.04,25,U004,0,,
+Sin LLM,3. Validaciones del formulario,6,crédito,Saldo,"Roberto Hernández, el saldo actual de tu cuenta de crédito es de $4,750.00 MXN. Tu crédito disponible es de $20,250.00 MXN.",,1,0.07,21,U004,2,,
+Sin LLM,4. Estado de cuenta con periodo inválido,1,necesito mi estado de cuenta,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.07,10,,0,,
+Sin LLM,4. Estado de cuenta con periodo inválido,2,U002,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.03,12,U002,0,,
+Sin LLM,4. Estado de cuenta con periodo inválido,3,crédito,Pregunta del formulario,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,1,0.03,11,U002,0,,
+Sin LLM,4. Estado de cuenta con periodo inválido,4,agosto,Validación,"No encontré un estado de cuenta para ese periodo. En estos datos de prueba está disponible Septiembre 2026.
+¿De qué fecha o periodo deseas consultar el estado de cuenta?",,2,0.05,29,U002,0,,
+Sin LLM,4. Estado de cuenta con periodo inválido,5,09/2026,Estado de cuenta,"Estado de cuenta - Septiembre 2026
+Cliente: Carlos Martínez
+Cuenta: credito
+Saldo inicial: $10,500.00 MXN
+Saldo final: $9,550.00 MXN
+Movimientos:
+• 2026-09-03 - Compra electrónica: $3,200.00 MXN
+• 2026-09-11 - Gasolina: $850.00 MXN
+• 2026-09-25 - Pago tarjeta: $-5,000.00 MXN",,3,0.06,40,U002,5,,
+Sin LLM,5. Reporte de soporte,1,necesito ayuda,Pregunta del formulario,¿Qué tipo de problema necesitas reportar?,,1,0.03,6,,0,,
+Sin LLM,5. Reporte de soporte,2,me aparece un cargo no reconocido de $850,Soporte,Registré tu reporte de soporte: cargo no reconocido. Monto reportado: $850. Tu folio es SOP-2F0F4C. Un asesor dará seguimiento a tu caso.,,1,0.05,22,,1,,
+Sin LLM,6. Consulta general específica,1,¿qué necesito para abrir una cuenta?,Consulta general,"Claro. Puedo brindarte información sobre horarios, cuentas, sucursales y servicios bancarios.",,1,0.03,11,,0,,
+Sin LLM,7. Fuera de alcance y botón de opción,1,quiero pedir una pizza,Fallback,No pude entender tu solicitud. ¿Podrías expresarla de otra manera? También puedes elegir una de estas opciones:,"Consultar saldo, Estado de cuenta, Reportar un problema, Información general",1,0.01,17,,0,,
+Sin LLM,7. Fuera de alcance y botón de opción,2,/consulta_saldo,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.06,10,,0,,
+Sin LLM,7. Fuera de alcance y botón de opción,3,U005,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.03,12,U005,0,,
+Sin LLM,7. Fuera de alcance y botón de opción,4,débito,Saldo,"Sofía Ramírez, el saldo disponible de tu cuenta de débito es de $17,000.00 MXN.",,1,0.08,14,U005,1,,
+Sin LLM,8. Mensaje sin sentido y recuperación,1,asdf qwerty,Fallback,No pude entender tu solicitud. ¿Podrías expresarla de otra manera? También puedes elegir una de estas opciones:,"Consultar saldo, Estado de cuenta, Reportar un problema, Información general",1,0.03,17,,0,,
+Sin LLM,8. Mensaje sin sentido y recuperación,2,¿cuánto tengo en mi tarjeta de crédito?,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.05,10,,0,,
+Sin LLM,8. Mensaje sin sentido y recuperación,3,U001,Saldo,"Ana López, el saldo actual de tu cuenta de crédito es de $2,850.50 MXN. Tu crédito disponible es de $27,149.50 MXN.",,1,0.05,21,U001,2,,
+Sin LLM,9. Dato suelto fuera de un formulario,1,U002,Dato suelto,"Hola, ¿en qué puedo ayudarte?",,1,0.02,5,U002,0,,
+Sin LLM,9. Dato suelto fuera de un formulario,2,quiero mi saldo de débito,Saldo,"Carlos Martínez, el saldo disponible de tu cuenta de débito es de $16,725.00 MXN.",,1,0.06,14,U002,1,,
+Sin LLM,10. Cambio de tema dentro de un formulario,1,tengo un problema,Pregunta del formulario,¿Qué tipo de problema necesitas reportar?,,1,0.03,6,,0,,
+Sin LLM,10. Cambio de tema dentro de un formulario,2,mejor quiero consultar mi saldo,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.06,10,,0,,
+Sin LLM,10. Cambio de tema dentro de un formulario,3,U001,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.04,12,U001,0,,
+Sin LLM,10. Cambio de tema dentro de un formulario,4,crédito,Saldo,"Ana López, el saldo actual de tu cuenta de crédito es de $2,850.50 MXN. Tu crédito disponible es de $27,149.50 MXN.",,1,0.05,21,U001,2,,
+Con LLM,1. Contexto multiturno (U001),1,"hola, soy U001",Saludo,"Hola Ana López, bienvenido a nuestro banco. ¿En qué podemos ayudarte hoy? Puedes consultar tu saldo, estado de cuenta, reportar un problema o obtener información general sobre nuestros servicios.",,1,0.37,29,U001,0,,
+Con LLM,1. Contexto multiturno (U001),2,quiero consultar mi saldo,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.04,12,U001,0,,
+Con LLM,1. Contexto multiturno (U001),3,débito,Saldo,"Ana López, el saldo disponible de tu cuenta de débito es de $20,500.75 MXN.",,1,0.26,14,U001,1,,
+Con LLM,1. Contexto multiturno (U001),4,ahora quiero mi estado de cuenta,Pregunta del formulario,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,1,0.03,11,U001,0,,
+Con LLM,1. Contexto multiturno (U001),5,septiembre 2026,Estado de cuenta,"Ana López, aquí te presento tu estado de cuenta para el mes de septiembre 2026:
+Saldo inicial: $16,000.00 MXN
+Saldo final: $20,500.75 MXN
+Movimientos:
+- 2026-09-01: Depósito de nómina: $6,000.00 MXN
+- 2026-09-08: Supermercado: $-1,250.25 MXN
+- 2026-09-15: Transferencia SPEI: $-249.00 MXN",,4,0.76,42,U001,5,,
+Con LLM,1. Contexto multiturno (U001),6,¿qué horario tienen las sucursales?,Consulta general,"Ana López, las sucursales del banco están abiertas de lunes a viernes de 9:00 a 16:00 y sábados de 9:00 a 14:00. Si necesitas verificar tu horario de atención o realizar una consulta, te recomiendo visitar nuestra página web o contactar a una sucursal para obtener más información.",,1,0.55,48,U001,0,,
+Con LLM,2. Saldo en un solo mensaje,1,soy U003 y quiero el saldo de mi tarjeta de crédito,Saldo,"Hola Mariana Torres, el saldo actual de tu cuenta de crédito es de $2,500.00 MXN. Tu límite de crédito es de $20,000.00 MXN y tu crédito disponible es de $17,500.00 MXN. ¿Necesitas ayuda con algo más?",,1,0.47,36,U003,3,,
+Con LLM,3. Validaciones del formulario,1,consulta mi saldo,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.06,10,,0,,
+Con LLM,3. Validaciones del formulario,2,U009,Validación,"El usuario indicado no existe. Para esta demostración puedes utilizar U001, U002, U003, U004 o U005.
+Para continuar, indícame tu número de cliente (por ejemplo, U001).",,2,0.04,26,,0,,
+Con LLM,3. Validaciones del formulario,3,U004,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.03,12,U004,0,,
+Con LLM,3. Validaciones del formulario,4,ahorro,Validación,"El tipo de cuenta debe ser débito o crédito.
+¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?",,2,0.03,21,U004,0,,
+Con LLM,3. Validaciones del formulario,5,débito,Validación,"Roberto Hernández no tiene una cuenta de debito. Sus cuentas disponibles son: credito.
+¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?",,2,0.04,25,U004,0,,
+Con LLM,3. Validaciones del formulario,6,crédito,Saldo,"Hola Roberto Hernández, el saldo actual de tu cuenta de crédito es de $4,750.00 MXN. Tu límite de crédito es de $25,000.00 MXN y tu crédito disponible es de $20,250.00 MXN.",,1,0.41,31,U004,3,,
+Con LLM,4. Estado de cuenta con periodo inválido,1,necesito mi estado de cuenta,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.05,10,,0,,
+Con LLM,4. Estado de cuenta con periodo inválido,2,U002,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.04,12,U002,0,,
+Con LLM,4. Estado de cuenta con periodo inválido,3,crédito,Pregunta del formulario,¿De qué fecha o periodo deseas consultar el estado de cuenta?,,1,0.03,11,U002,0,,
+Con LLM,4. Estado de cuenta con periodo inválido,4,agosto,Validación,"No encontré un estado de cuenta para ese periodo. En estos datos de prueba está disponible Septiembre 2026.
+¿De qué fecha o periodo deseas consultar el estado de cuenta?",,2,0.03,29,U002,0,,
+Con LLM,4. Estado de cuenta con periodo inválido,5,09/2026,Estado de cuenta,"Hola Carlos Martínez, te presento el estado de cuenta de tu cuenta de crédito para el periodo de septiembre 2026. Tu saldo inicial era de $10,500.00 MXN y tu saldo final es de $9,550.00 MXN. A continuación, te muestro los movimientos realizados durante ese mes:
+* 03/09/2026: Compra electrónica: $3,200.00 MXN
+* 11/09/2026: Gasolina: $850.00 MXN
+* 25/09/2026: Pago tarjeta: $-5,000.00 MXN",,2,0.86,62,U002,5,,
+Con LLM,5. Reporte de soporte,1,necesito ayuda,Pregunta del formulario,¿Qué tipo de problema necesitas reportar?,,1,0.02,6,,0,,
+Con LLM,5. Reporte de soporte,2,me aparece un cargo no reconocido de $850,Soporte,"Carlos, gracias por contactarnos. Acabo de registrar tu reporte de soporte. Tu caso tiene el folio SOP-24A7FE y un cargo no reconocido de $850 MXN. Un asesor te dará seguimiento para resolver este problema. Estamos aquí para ayudarte.",,1,0.45,38,,1,,Carlos
+Con LLM,6. Consulta general específica,1,¿qué necesito para abrir una cuenta?,Consulta general,"Para abrir una cuenta, necesitarás presentar tu INE vigente y un comprobante de domicilio. También puedes optar por un tipo de cuenta, como débito o tarjeta de crédito. Si necesitas ayuda o tienes alguna pregunta, no dudes en visitar una de nuestras sucursales.",,1,0.43,43,,0,,
+Con LLM,7. Fuera de alcance y botón de opción,1,quiero pedir una pizza,Fallback,"Lo siento, pero no puedo ayudarte con eso. ¿Podrías reformular tu solicitud y decirme cómo puedo ayudarte? Estamos aquí para ayudarte con cualquier consulta o problema relacionado con tus servicios bancarios. ¿Quieres consultar tu saldo, el estado de tu cuenta, informarte sobre algún problema o obtener información general?","Consultar saldo, Estado de cuenta, Reportar un problema, Información general",1,0.47,48,,0,,
+Con LLM,7. Fuera de alcance y botón de opción,2,/consulta_saldo,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.05,10,,0,,
+Con LLM,7. Fuera de alcance y botón de opción,3,U005,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.03,12,U005,0,,
+Con LLM,7. Fuera de alcance y botón de opción,4,débito,Saldo,"Sofía Ramírez, el saldo disponible de tu cuenta de débito es de $17,000.00 MXN.",,1,0.27,14,U005,1,,
+Con LLM,8. Mensaje sin sentido y recuperación,1,asdf qwerty,Fallback,¡Hola! Me alegra poder ayudarte. ¿En qué puedo asistirte hoy?,,1,0.21,10,,0,,
+Con LLM,8. Mensaje sin sentido y recuperación,2,¿cuánto tengo en mi tarjeta de crédito?,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.02,10,,0,,
+Con LLM,8. Mensaje sin sentido y recuperación,3,U001,Saldo,"¡Hola Ana López! El saldo actual de tu cuenta de crédito es de $2,850.50 MXN. Tu límite de crédito es de $30,000.00 MXN y tu crédito disponible es de $27,149.50 MXN.",,1,0.4,31,U001,3,,
+Con LLM,9. Dato suelto fuera de un formulario,1,U002,Dato suelto,"Hola Carlos Martínez, gracias por compartir tu número de cliente con nosotros. ¿En qué podemos ayudarte hoy? Puedes consultar tu saldo, verificar el estado de tu cuenta, reportar un problema o obtener información general sobre nuestros servicios. ¿Qué opción prefieres?",,1,0.41,40,U002,0,,
+Con LLM,9. Dato suelto fuera de un formulario,2,quiero mi saldo de débito,Saldo,"Hola Carlos Martínez, el saldo disponible de tu cuenta de débito es de $16,725.00 MXN.",,1,0.25,15,U002,1,,
+Con LLM,10. Cambio de tema dentro de un formulario,1,tengo un problema,Pregunta del formulario,¿Qué tipo de problema necesitas reportar?,,1,0.01,6,,0,,
+Con LLM,10. Cambio de tema dentro de un formulario,2,mejor quiero consultar mi saldo,Pregunta del formulario,"Para continuar, indícame tu número de cliente (por ejemplo, U001).",,1,0.05,10,,0,,
+Con LLM,10. Cambio de tema dentro de un formulario,3,U001,Pregunta del formulario,¿De qué tipo de cuenta deseas realizar la consulta: débito o crédito?,,1,0.05,12,U001,0,,
+Con LLM,10. Cambio de tema dentro de un formulario,4,crédito,Saldo,"Hola Ana López, el saldo actual de tu cuenta de crédito es de $2,850.50 MXN. Tu límite de crédito es de $30,000.00 MXN y tu crédito disponible es de $27,149.50 MXN.",,1,0.39,31,U001,3,,

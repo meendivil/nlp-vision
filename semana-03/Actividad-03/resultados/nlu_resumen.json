@@ -1,0 +1,26 @@
+{
+  "Frases":{
+    "Sin LLM":24.0,
+    "Con LLM":24.0
+  },
+  "Exactitud de intención":{
+    "Sin LLM":0.8333333333,
+    "Con LLM":0.9166666667
+  },
+  "Exactitud (temas del banco)":{
+    "Sin LLM":0.8947368421,
+    "Con LLM":0.9473684211
+  },
+  "Fuera de tema detectado":{
+    "Sin LLM":0.6,
+    "Con LLM":0.8
+  },
+  "Entidades correctas":{
+    "Sin LLM":1.0,
+    "Con LLM":1.0
+  },
+  "Confianza media":{
+    "Sin LLM":0.96625,
+    "Con LLM":0.94875
+  }
+}

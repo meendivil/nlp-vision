@@ -1,0 +1,198 @@
+version: "3.1"
+
+nlu:
+
+# --------------------------------------------------
+# SALUDO
+# --------------------------------------------------
+
+- intent: saludo
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - qué tal
+    - hola, ¿cómo estás?
+    - buen día
+    - hey
+    - hola banco
+    - necesito hacer una consulta
+
+
+# --------------------------------------------------
+# CONSULTA DE SALDO
+# --------------------------------------------------
+
+- intent: consulta_saldo
+  examples: |
+    - quiero consultar mi saldo
+    - ¿cuánto dinero tengo?
+    - quiero saber cuánto tengo disponible
+    - consulta mi saldo
+    - ¿cuál es mi saldo?
+    - quiero ver el saldo de mi cuenta de [débito](tipo_cuenta)
+    - ¿cuánto tengo en mi tarjeta de [crédito](tipo_cuenta)?
+    - dime el saldo de mi cuenta de [débito](tipo_cuenta)
+    - quiero saber cuánto debo en mi tarjeta de [crédito](tipo_cuenta)
+    - consulta el saldo de mi cuenta de [crédito](tipo_cuenta)
+    - ¿cuánto dinero tengo en mi cuenta de [debito](tipo_cuenta)?
+    - muéstrame mi saldo disponible
+    - soy [U001](usuario_id) y quiero consultar mi saldo
+    - saldo del cliente [U003](usuario_id)
+    - quiero el saldo de [crédito](tipo_cuenta) del usuario [U002](usuario_id)
+    - mi usuario es [U005](usuario_id), ¿cuánto tengo en [débito](tipo_cuenta)?
+
+
+# --------------------------------------------------
+# ESTADO DE CUENTA
+# --------------------------------------------------
+
+- intent: estado_cuenta
+  examples: |
+    - quiero consultar mi estado de cuenta
+    - necesito mi estado de cuenta
+    - muéstrame mi estado de cuenta
+    - quiero el estado de cuenta de [septiembre](fecha)
+    - necesito mi estado de cuenta de [septiembre 2026](fecha)
+    - muéstrame el estado de mi cuenta de [débito](tipo_cuenta)
+    - necesito el estado de cuenta de [septiembre](fecha) de mi tarjeta de [crédito](tipo_cuenta)
+    - quiero mi estado de cuenta del [09/2026](fecha)
+    - consulta mi estado de cuenta de [enero](fecha)
+    - quiero revisar los movimientos de mi cuenta de [débito](tipo_cuenta)
+    - quiero consultar mi estado de cuenta del [septiembre](fecha)
+    - soy [U004](usuario_id) y necesito mi estado de cuenta
+    - estado de cuenta de [crédito](tipo_cuenta) del cliente [U001](usuario_id) de [septiembre 2026](fecha)
+
+
+# --------------------------------------------------
+# SOPORTE
+# --------------------------------------------------
+
+- intent: soporte
+  examples: |
+    - necesito ayuda
+    - necesito soporte
+    - tengo un problema
+    - mi tarjeta está bloqueada
+    - necesito ayuda con mi tarjeta
+    - no puedo entrar a mi banca en línea
+    - olvidé mi contraseña
+    - tengo un [cargo no reconocido](tipo_solicitud)
+    - quiero reportar una [tarjeta bloqueada](tipo_solicitud)
+    - tengo problemas de [acceso a banca](tipo_solicitud)
+    - quiero reportar un cargo de [$1500](monto)
+    - hay un cargo de [$500](monto) que no reconozco
+    - necesito reportar un movimiento de [$2,000](monto)
+    - quiero reportar mi [tarjeta perdida](tipo_solicitud)
+
+
+# --------------------------------------------------
+# CONSULTA GENERAL
+# --------------------------------------------------
+
+- intent: consulta_general
+  examples: |
+    - ¿cuál es el horario del banco?
+    - ¿a qué hora abren?
+    - ¿a qué hora cierran?
+    - ¿qué tipos de cuentas tienen?
+    - ¿dónde hay sucursales?
+    - ¿cómo puedo abrir una cuenta?
+    - ¿qué necesito para abrir una cuenta?
+    - ¿cobran comisión?
+    - ¿puedo hacer transferencias?
+    - ¿dónde puedo retirar dinero?
+    - ¿qué servicios ofrece el banco?
+    - quiero información sobre sus cuentas
+
+# --------------------------------------------------
+# INFORMAR (respuestas a las preguntas de los formularios)
+# --------------------------------------------------
+
+- intent: informar
+  examples: |
+    - [U001](usuario_id)
+    - [U002](usuario_id)
+    - [u003](usuario_id)
+    - [U004](usuario_id)
+    - [U005](usuario_id)
+    - soy [U002](usuario_id)
+    - mi número de cliente es [U001](usuario_id)
+    - mi usuario es [U003](usuario_id)
+    - soy el cliente [U005](usuario_id)
+    - [débito](tipo_cuenta)
+    - [crédito](tipo_cuenta)
+    - [debito](tipo_cuenta)
+    - [credito](tipo_cuenta)
+    - la de [débito](tipo_cuenta)
+    - mi cuenta de [crédito](tipo_cuenta)
+    - de mi tarjeta de [crédito](tipo_cuenta)
+    - [septiembre](fecha)
+    - [septiembre 2026](fecha)
+    - [09/2026](fecha)
+    - el de [septiembre](fecha)
+    - del mes de [septiembre 2026](fecha)
+    - [tarjeta bloqueada](tipo_solicitud)
+    - [cargo no reconocido](tipo_solicitud)
+    - [tarjeta perdida](tipo_solicitud)
+    - problemas de [acceso a banca](tipo_solicitud)
+    - es un [cargo no reconocido](tipo_solicitud) de [$1200](monto)
+
+# --------------------------------------------------
+# FUERA DE ALCANCE (temas que el bot no atiende)
+# --------------------------------------------------
+
+- intent: fuera_de_alcance
+  examples: |
+    - quiero ordenar comida a domicilio
+    - ¿quién ganó el partido de ayer?
+    - recomiéndame una película
+    - ¿cómo está el clima hoy?
+    - ¿cuánto cuesta un boleto de avión?
+    - ¿qué hora es?
+    - ¿cómo se prepara un pastel?
+    - quiero comprar un celular
+    - háblame de política
+    - ¿cuál es tu color favorito?
+    - quiero reservar un hotel
+    - ¿cuánto es 5 por 8?
+    - ponme una canción
+    - ¿dónde puedo ver series?
+    - jajaja
+    - xyz
+    - ¿cómo arreglo mi coche?
+    - quiero aprender inglés
+    - ¿qué opinas de los videojuegos?
+    - ¿cuántos años tienes?
+
+# --------------------------------------------------
+# REGEX: número de cliente (U001, U002, ...)
+# --------------------------------------------------
+
+- regex: usuario_id
+  examples: |
+    - \bU\d{3}\b
+
+# --------------------------------------------------
+# LOOKUP TABLE
+# --------------------------------------------------
+
+- lookup: tipo_cuenta
+  examples: |
+    - débito
+    - debito
+    - crédito
+    - credito
+
+# --------------------------------------------------
+# SINÓNIMOS
+# --------------------------------------------------
+
+- synonym: debito
+  examples: |
+    - débito
+
+- synonym: credito
+  examples: |
+    - crédito

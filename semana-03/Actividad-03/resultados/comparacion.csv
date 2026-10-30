@@ -1,0 +1,13 @@
+﻿Métrica,Sin LLM,Con LLM
+Exactitud de intención (NLU),83%,92%
+Entidades correctas (NLU),100%,100%
+Fuera de tema detectado (NLU),60%,80%
+Escenarios completados,9 / 10,10 / 10
+Fallback con opciones (botones),100%,50%
+Respuestas con cantidades correctas,100%,100%
+Respuestas con un nombre no respaldado,0,1
+Latencia media por turno (s),0.04,0.22
+Latencia media de respuestas finales (s),0.05,0.43
+Latencia máxima (s),0.08,0.86
+Palabras por respuesta final (promedio),18.4,33.2
+Respuestas finales distintas / total,12 / 16,16 / 16

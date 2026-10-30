@@ -1,0 +1,49 @@
+﻿Versión,Texto,Esperada,Predicha,Confianza,Intención correcta,Entidades esperadas,Entidades correctas,Extraídas
+Sin LLM,"hola, qué gusto saludarte",saludo,consulta_saldo,0.63,False,0,0,
+Sin LLM,"saludos, buenas tardes",saludo,saludo,1.0,True,0,0,
+Sin LLM,¿cuánto dinero me queda en la cuenta?,consulta_saldo,consulta_saldo,1.0,True,0,0,
+Sin LLM,necesito saber el saldo de mi tarjeta de crédito,consulta_saldo,consulta_saldo,1.0,True,1,1,tipo_cuenta=credito
+Sin LLM,"soy U002, ¿cuánto tengo en débito?",consulta_saldo,consulta_saldo,1.0,True,2,2,usuario_id=U002; tipo_cuenta=debito
+Sin LLM,muéstrame cuánto debo en crédito,consulta_saldo,consulta_saldo,1.0,True,1,1,tipo_cuenta=credito
+Sin LLM,quiero ver los movimientos de septiembre,estado_cuenta,estado_cuenta,0.96,True,1,1,fecha=septiembre
+Sin LLM,mándame el estado de cuenta de mi tarjeta de crédito,estado_cuenta,estado_cuenta,1.0,True,1,1,tipo_cuenta=credito
+Sin LLM,necesito el estado de cuenta del 09/2026,estado_cuenta,estado_cuenta,1.0,True,1,1,fecha=09/2026
+Sin LLM,me clonaron la tarjeta,soporte,informar,0.98,False,0,0,
+Sin LLM,"hay un cargo no reconocido de $3,200 en mi cuenta",soporte,soporte,0.98,True,2,2,"tipo_solicitud=cargo no reconocido; monto=$3,200"
+Sin LLM,no puedo ingresar a la banca en línea,soporte,soporte,1.0,True,0,0,
+Sin LLM,quiero reportar una tarjeta bloqueada,soporte,soporte,1.0,True,1,1,tipo_solicitud=tarjeta bloqueada
+Sin LLM,¿abren los sábados?,consulta_general,consulta_general,1.0,True,0,0,
+Sin LLM,¿qué requisitos piden para abrir una cuenta?,consulta_general,consulta_general,1.0,True,0,0,
+Sin LLM,¿tienen cajeros cerca de mi casa?,consulta_general,consulta_general,0.86,True,0,0,
+Sin LLM,U005,informar,informar,1.0,True,1,1,usuario_id=U005
+Sin LLM,la de crédito,informar,informar,1.0,True,1,1,tipo_cuenta=credito
+Sin LLM,septiembre 2026,informar,informar,1.0,True,1,1,fecha=septiembre 2026
+Sin LLM,¿quién ganó el mundial?,fallback,fuera_de_alcance,1.0,True,0,0,
+Sin LLM,recomiéndame un restaurante,fallback,fuera_de_alcance,1.0,True,0,0,
+Sin LLM,asdfgh,fallback,saludo,0.89,False,0,0,
+Sin LLM,¿cuál es la capital de Francia?,fallback,consulta_general,0.93,False,0,0,
+Sin LLM,quiero invertir en bolsa,fallback,fuera_de_alcance,0.96,True,0,0,
+Con LLM,"hola, qué gusto saludarte",saludo,saludo,0.96,True,0,0,
+Con LLM,"saludos, buenas tardes",saludo,saludo,1.0,True,0,0,
+Con LLM,¿cuánto dinero me queda en la cuenta?,consulta_saldo,consulta_saldo,1.0,True,0,0,
+Con LLM,necesito saber el saldo de mi tarjeta de crédito,consulta_saldo,consulta_saldo,1.0,True,1,1,tipo_cuenta=credito
+Con LLM,"soy U002, ¿cuánto tengo en débito?",consulta_saldo,consulta_saldo,1.0,True,2,2,usuario_id=U002; tipo_cuenta=debito
+Con LLM,muéstrame cuánto debo en crédito,consulta_saldo,consulta_saldo,1.0,True,1,1,tipo_cuenta=credito
+Con LLM,quiero ver los movimientos de septiembre,estado_cuenta,estado_cuenta,0.91,True,1,1,fecha=septiembre
+Con LLM,mándame el estado de cuenta de mi tarjeta de crédito,estado_cuenta,estado_cuenta,1.0,True,1,1,tipo_cuenta=credito
+Con LLM,necesito el estado de cuenta del 09/2026,estado_cuenta,estado_cuenta,1.0,True,1,1,fecha=09/2026
+Con LLM,me clonaron la tarjeta,soporte,informar,1.0,False,0,0,
+Con LLM,"hay un cargo no reconocido de $3,200 en mi cuenta",soporte,soporte,0.87,True,2,2,"tipo_solicitud=cargo no reconocido; monto=$3,200"
+Con LLM,no puedo ingresar a la banca en línea,soporte,soporte,1.0,True,0,0,
+Con LLM,quiero reportar una tarjeta bloqueada,soporte,soporte,1.0,True,1,1,tipo_solicitud=tarjeta bloqueada
+Con LLM,¿abren los sábados?,consulta_general,consulta_general,1.0,True,0,0,
+Con LLM,¿qué requisitos piden para abrir una cuenta?,consulta_general,consulta_general,1.0,True,0,0,
+Con LLM,¿tienen cajeros cerca de mi casa?,consulta_general,consulta_general,0.92,True,0,0,
+Con LLM,U005,informar,informar,1.0,True,1,1,usuario_id=U005
+Con LLM,la de crédito,informar,informar,1.0,True,1,1,tipo_cuenta=credito
+Con LLM,septiembre 2026,informar,informar,1.0,True,1,1,fecha=septiembre 2026
+Con LLM,¿quién ganó el mundial?,fallback,fuera_de_alcance,1.0,True,0,0,
+Con LLM,recomiéndame un restaurante,fallback,fuera_de_alcance,1.0,True,0,0,
+Con LLM,asdfgh,fallback,saludo,0.85,False,0,0,
+Con LLM,¿cuál es la capital de Francia?,fallback,fuera_de_alcance,0.66,True,0,0,
+Con LLM,quiero invertir en bolsa,fallback,nlu_fallback,0.6,True,0,0,

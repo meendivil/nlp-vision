@@ -1,0 +1,10 @@
+﻿Etiqueta,Sin LLM,Con LLM
+Pregunta del formulario,0.04,0.04
+Validación,0.04,0.04
+Saludo,0.03,0.37
+Saldo,0.06,0.35
+Estado de cuenta,0.06,0.81
+Soporte,0.05,0.45
+Consulta general,0.03,0.49
+Fallback,0.02,0.34
+Dato suelto,0.02,0.41
