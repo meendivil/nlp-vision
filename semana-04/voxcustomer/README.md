@@ -72,7 +72,7 @@ voxcustomer/
 │   └── customer_support_tickets.csv
 ├── .streamlit/config.toml       # Dark brand theme
 ├── requirements.txt
-├── setup.sh                     # One-shot venv bootstrap
+├── setup.sh                     # One-shot venv bootstrap (conda: see below)
 └── README.md
 ```
 
@@ -82,21 +82,84 @@ voxcustomer/
 
 ### 1 · Create the Python environment
 
-The repo ships with a one-shot setup script that creates a local `.venv`,
-upgrades `pip`, and installs every dependency.
+**Requirements:** Python **3.10 – 3.12** (3.11 recommended — `torch<2.5`
+has no wheels for 3.13+). Pick **one** of the options below.
+
+#### Option A · Conda (Anaconda / Miniconda)
+
+1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or
+   [Anaconda](https://www.anaconda.com/download) if you don't have it, and
+   check it works:
+
+   ```bash
+   conda --version
+   ```
+
+   > On **Windows**, use the *Anaconda Prompt* (or run `conda init powershell`
+   > once and reopen PowerShell). On **macOS / Linux**, if `conda` is not
+   > found, run `conda init zsh` (or `bash`) and open a new terminal.
+
+2. Create and activate the environment:
+
+   ```bash
+   cd semana-04/voxcustomer
+   conda create -n voxcustomer python=3.11 -y
+   conda activate voxcustomer
+   ```
+
+3. Install the dependencies with `pip` **inside** the conda environment:
+
+   ```bash
+   python -m pip install --upgrade pip wheel setuptools
+   python -m pip install -r requirements.txt
+   ```
+
+4. Check that the environment's Python is the one being used:
+
+   ```bash
+   python --version                        # Python 3.11.x
+   python -c "import streamlit, torch; print(streamlit.__version__, torch.__version__)"
+   ```
+
+Useful conda commands:
+
+```bash
+conda env list                    # list your environments
+conda deactivate                  # leave the environment
+conda env remove -n voxcustomer   # delete it and start from scratch
+```
+
+#### Option B · venv (setup script)
+
+The repo ships with a one-shot setup script (macOS / Linux) that creates a
+local `.venv`, upgrades `pip`, and installs every dependency.
 
 ```bash
 cd semana-04/voxcustomer
 ./setup.sh
 ```
 
-Prefer to do it by hand?
+> To use a specific interpreter: `PYTHON=python3.11 ./setup.sh`.
+
+#### Option C · venv (by hand)
+
+**macOS / Linux**
 
 ```bash
 cd semana-04/voxcustomer
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip wheel setuptools
+pip install -r requirements.txt
+```
+
+**Windows (PowerShell)**
+
+```powershell
+cd semana-04\voxcustomer
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip wheel setuptools
 pip install -r requirements.txt
 ```
 
@@ -117,8 +180,14 @@ The repo already ships with a copy; if it gets deleted, grab it again from
 
 ### 3 · Run the app
 
+Activate the environment you created and launch Streamlit from the
+`voxcustomer/` folder:
+
 ```bash
-source .venv/bin/activate
+conda activate voxcustomer        # Option A (conda)
+source .venv/bin/activate         # Options B / C (venv, macOS / Linux)
+# .venv\Scripts\Activate.ps1      # Option C (venv, Windows PowerShell)
+
 streamlit run app.py
 ```
 
@@ -153,6 +222,8 @@ transformer download requires network access on first launch.
 | Transformer fails to load with a network error | You're offline — Page 1 and the playground's TF-IDF column still work; retry the transformer load when online. |
 | Slow first page load | Sentiment scoring runs once per dataset and is cached. Subsequent renders are instant. |
 | Streamlit cannot find `src/...` | Always launch from the `voxcustomer/` folder (`streamlit run app.py`). |
+| `streamlit: command not found` / `ModuleNotFoundError` | The environment isn't active. Run `conda activate voxcustomer` (or activate `.venv`) before launching. |
+| `pip` can't find a matching `torch` version | Your Python is too new. Recreate the env with Python 3.11 (`conda create -n voxcustomer python=3.11 -y`). |
 
 ---
 
